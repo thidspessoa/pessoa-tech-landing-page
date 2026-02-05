@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* =========================
+   TEMA (Tailwind v4)
+========================= */
+@theme {
+  --color-primary: #8B47ED;
+  --color-dark: #1B2240;
+  --color-dark-lighter: #242C4F;
+  --color-secondary: #94A3B8;
+
+  --font-sans: "Inter", "sans-serif";
+}
+
+/* =========================
+   CSS GLOBAL
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: white;
+  font-family: var(--font-sans);
+}
+
+/* =========================
+   CLASSES CUSTOMIZADAS
+========================= */
+.glass {
+  background: rgba(27, 34, 64, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glow-primary {
+  box-shadow: 0 0 20px rgba(139, 71, 237, 0.4);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #8B47ED, #C084FC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.bg-grid-pattern {
+  background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@layer utilities {
+  .spin-slow {
+    animation: spin 25s linear infinite;
+  }
+
+  .spin-slower {
+    animation: spin 35s linear infinite reverse;
+  }
+}
