@@ -5,7 +5,7 @@ Este projeto é o **site institucional da Pessoa Tech**, uma consultoria de tecn
 O site apresenta a proposta da consultoria, seus serviços, metodologia de trabalho e canais de contato, com foco em **performance, acessibilidade, SEO e uma experiência moderna e profissional**.
 
 🔗 **Site em produção:**  
-> _Em breve — deploy via Vercel_
+> https://pessoa-tech.vercel.app
 
 ---
 
