@@ -97,14 +97,10 @@ Este projeto consolidou diversos aprendizados importantes de desenvolvimento web
 Para executar o projeto em ambiente local:
 
 1. Clone o repositório:
-   ```bash``
-   git clone <url-do-repositorio-do-projeto>
-2. Instale as dependências:
-    ``bash``
-   npm install
+   ```git clone <url-do-repositorio-do-projeto>```
+2. Instale as dependências: 
+   ```npm install```
 3. Inicie o servidor de desenvolvimento:
-   ```bash``
-   npm run dev
+   ```npm run dev```
 4. Acesse o localhost no navegador:
-    ```bash``
-   http://localhost:porta
+   ```http://localhost:porta```
