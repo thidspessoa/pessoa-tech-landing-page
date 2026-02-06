@@ -1,84 +1,86 @@
 
 import React from 'react';
+import { BotMessageSquare, LayoutTemplate, TabletSmartphone, Megaphone, Sparkles, Palette } from 'lucide-react';
 
 const services = [
   {
-    title: 'Gestão de Infraestrutura de TI',
-    description: 'Monitoramento proativo, gestão de servidores e redes, com backup contínuo para garantir disponibilidade e segurança.',
+    title: 'Desenvolvimento Web & Sistemas',
+    description:
+      'Criamos websites, landing pages e sistemas sob medida, focados em performance, segurança e facilidade de uso, alinhados à realidade do seu negócio.',
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
-      </svg>
+      <LayoutTemplate className="w-6 h-6" />
     ),
   },
   {
-    title: 'Suporte e Help Desk',
-    description: 'Suporte remoto e on-site com primeiro atendimento garantido em até 30 minutos. Agilidade para resolver problemas.',
+    title: 'Aplicativos & Soluções Mobile',
+    description:
+      'Desenvolvemos aplicações mobile e soluções acessíveis por dispositivos móveis para otimizar processos e aproximar sua empresa do cliente.',
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-      </svg>
+      <TabletSmartphone className="w-6 h-6" />
     ),
   },
   {
-    title: 'Cloud Computing',
-    description: 'Migração e gestão de nuvem com soluções como Microsoft 365, Google Workspace e AWS para otimizar operações.',
+    title: 'Automações & Integrações',
+    description:
+      'Automatizamos tarefas, criamos chatbots e integramos sistemas para reduzir custos operacionais e aumentar a eficiência do seu negócio.',
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-      </svg>
+      <BotMessageSquare className="w-6 h-6" />
     ),
   },
   {
-    title: 'Segurança da Informação',
-    description: 'Proteção contra ataques cibernéticos, implementação de firewalls, análise de vulnerabilidades e soluções de DR.',
+    title: 'Marketing Digital & Performance',
+    description:
+      'Executamos estratégias de marketing digital focadas em tráfego pago, conversão e análise de resultados, sempre orientadas por dados.',
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
+      <Megaphone className="w-6 h-6" />
     ),
   },
   {
-    title: 'Consultoria Estratégica em TI',
-    description: 'Diagnóstico e planejamento para otimização do ambiente de TI, reduzindo custos e aumentando a produtividade.',
+    title: 'Branding, Conteúdo & Redes Sociais',
+    description:
+      'Construímos marcas fortes com identidade visual, conteúdo estratégico e gestão de redes sociais alinhadas ao posicionamento do negócio.',
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
+      <Sparkles className="w-6 h-6" />
     ),
   },
   {
-    title: 'Gestão da Produtividade',
-    description: 'Transforme a maneira como sua empresa trabalha e a produtividade das equipes usando tecnologia de gestão moderna.',
+    title: 'Design Gráfico & Materiais Impressos',
+    description:
+      'Criamos materiais gráficos personalizados como panfletos, banners, adesivos e impressos que fortalecem sua marca no ponto de venda.',
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
+      <Palette />
     ),
   },
 ];
 
-const Services: React.FC = () => {
+
+const Services = () => {
   return (
-    <section id="servicos" className="py-24 bg-dark">
+    <section id="servicos" className="py-16 lg:py-24 bg-dark">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">O que <span className="text-primary">entregamos</span></h2>
-          <p className="text-secondary max-w-2xl mx-auto">
-            Soluções completas em tecnologia para impulsionar seu negócio com clareza e eficiência.
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-3 lg:mb-4">
+            O que <span className="text-primary">entregamos</span>
+          </h2>
+          <p className="text-secondary text-sm lg:text-base max-w-2xl mx-auto">
+            Soluções completas para impulsionar seu negócio com clareza e eficiência.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="group bg-dark-lighter border border-white/5 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300"
+            <div
+              key={index}
+              className="group bg-dark-lighter border border-white/5 p-6 lg:p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 text-center lg:text-left"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+              <div className="mx-auto lg:mx-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-5 group-hover:bg-primary group-hover:text-white transition-all">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+
+              <h3 className="text-lg lg:text-xl font-bold mb-3">
+                {service.title}
+              </h3>
+
               <p className="text-secondary text-sm leading-relaxed">
                 {service.description}
               </p>
