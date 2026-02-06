@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { SITE_CONFIG } from '../../config/site';
 import { WhatsappIcon } from '../icons/WhatsappIcon';
@@ -6,73 +5,100 @@ import { HeroBackground } from '../ui/HeroBackground';
 
 const Hero = () => {
   return (
-    <section id="inicio" aria-labelledby="hero-title" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-dark">
-      {/* 4. Background Tecnológico Abstrato - Visibilidade Ajustada */}
-      <HeroBackground className="absolute inset-0 z-0 overflow-hidden pointer-events-none" />
-      
-      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-        
-        {/* Lado Esquerdo - Conteúdo Textual */}
-        <div className="relative flex flex-col gap-8">
-          {/* 5. Círculos decorativos ao redor do elemento principal esquerdo */}
-          <div className="absolute -top-20 -left-20 w-64 h-64 border border-white/5 rounded-full pointer-events-none -z-10" />
-          <div className="absolute -top-10 -left-10 w-48 h-48 border border-white/5 rounded-full pointer-events-none -z-10" />
+    <section
+      id="inicio"
+      aria-labelledby="hero-title"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-dark"
+    >
+      {/* Background */}
+      <HeroBackground className="absolute inset-0 z-0 pointer-events-none" />
 
-          <h1 id="hero-title" className="text-5xl lg:text-7xl font-bold leading-tight text-white">
-            Soluções digitais <span className="text-primary">sob medida</span> para a realidade do seu negócio
+      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+        {/* ================= LEFT CONTENT ================= */}
+        <div
+          className="
+            relative
+            flex flex-col gap-8
+            text-center
+            lg:text-left
+            max-w-xl
+            md:max-w-xl
+            lg:max-w-none
+            mx-auto
+            lg:mx-0
+          "
+        >
+          {/* Decorative circles — mantidos apenas a partir do tablet */}
+          <div className="absolute -top-20 -left-20 w-64 h-64 border border-white/5 rounded-full pointer-events-none -z-10 hidden md:block" />
+          <div className="absolute -top-10 -left-10 w-48 h-48 border border-white/5 rounded-full pointer-events-none -z-10 hidden md:block" />
+
+          <h1
+            id="hero-title"
+            className="
+              text-5xl
+              md:text-5xl
+              lg:text-7xl
+              font-bold
+              leading-tight
+              text-white
+            "
+          >
+            Soluções{' '}
+            <span className="text-primary">digitais e criativas</span> sob medida
+            para seu negócio
           </h1>
-          
-          <div className="flex flex-col gap-6 max-w-lg">
-            <p className="text-lg text-secondary leading-relaxed">
-              Atuamos junto a empreendedores para transformar problemas reais em soluções digitais simples, eficientes e escaláveis.
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <a 
-                href={SITE_CONFIG.urlWpp} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Abrir conversa no WhatsApp"
-                className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all glow-primary"
-                data-cta="hero-whatsapp"
-                data-source="hero"
-              >
-                <WhatsappIcon className="w-5 h-5" />
-                Fale Conosco
-              </a>
-              <a 
-                href="#servicos" 
-                className="flex items-center gap-2 border border-primary text-white hover:bg-primary/10 px-8 py-4 rounded-xl font-bold transition-all"
-              >
-                Avaliação Gratuita
-              </a>
-            </div>
+
+          <p className="text-lg text-secondary leading-relaxed">
+            Atuamos para transformar desafios reais em soluções práticas - da
+            tecnologia ao marketing e design.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <a
+              href={SITE_CONFIG.urlWpp}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir conversa no WhatsApp"
+              className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all glow-primary"
+            >
+              <WhatsappIcon className="w-5 h-5" />
+              Fale Conosco
+            </a>
+
+            <a
+              href="#servicos"
+              className="flex items-center gap-2 border border-primary text-white hover:bg-primary/10 px-8 py-4 rounded-xl font-bold transition-all"
+            >
+              Avaliação Gratuita
+            </a>
           </div>
 
-          <div className="pt-8 border-t border-white/10 flex gap-12">
+          {/* Metrics – desktop only */}
+          <div className="hidden lg:flex pt-8 border-t border-white/10 gap-12">
             <div>
-              <p className="text-2xl font-bold text-white">
-                <data value="100">100%</data>
+              <p className="text-2xl font-bold text-white">100%</p>
+              <p className="text-xs text-secondary uppercase tracking-wider">
+                Satisfação
               </p>
-              <p className="text-xs text-secondary uppercase tracking-wider">Satisfação</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-white">
-                <data value="24">24h</data>
+              <p className="text-2xl font-bold text-white">24h</p>
+              <p className="text-xs text-secondary uppercase tracking-wider">
+                Suporte
               </p>
-              <p className="text-xs text-secondary uppercase tracking-wider">Suporte</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-white">
-                <data value="R$">R$</data>
+              <p className="text-2xl font-bold text-white">R$</p>
+              <p className="text-xs text-secondary uppercase tracking-wider">
+                Preços acessíveis
               </p>
-              <p className="text-xs text-secondary uppercase tracking-wider">Preços acessíveis</p>
             </div>
           </div>
         </div>
 
-        {/* Lado Direito - Visual Principal */}
-        <div className="relative flex justify-center lg:justify-end items-center">
+        {/* ================= RIGHT VISUAL (DESKTOP ONLY) ================= */}
+        <div className="hidden relative lg:flex justify-center lg:justify-end items-center">
           <div className="relative w-full max-w-md aspect-square flex items-center justify-center">
             
             {/* 5. Elementos geométricos adicionais com animação de rotação suave */}
@@ -113,9 +139,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30 animate-bounce">
+      <div className="hidden lg:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 opacity-30 animate-bounce">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
           <div className="w-1 h-2 bg-white rounded-full" />
         </div>
